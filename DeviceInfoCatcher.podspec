@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'DeviceInfo'
-  s.version          = '0.0.1'
+  s.name             = 'DeviceInfoCatcher'
+  s.version          = '0.0.2'
   s.summary          = 'get DeviceInfo.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Khala-wan/DeviceInfo'
+  s.homepage         = 'https://github.com/Khala-wan/DeviceInfoCatcher'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Khala-wan' => 'wansheng_ios@sina.com' }
@@ -30,10 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '7.0'
 
-  s.source_files = 'DeviceInfo/Classes/**/*'
+  s.source_files = 'DeviceInfoCatcher/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'DeviceInfo' => ['DeviceInfo/Assets/*.png']
+  #   'DeviceInfo' => ['DeviceInfoCatcher/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

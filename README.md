@@ -1,4 +1,4 @@
-# DeviceInfo
+# DeviceInfoCatcher
 
 [![CI Status](http://img.shields.io/travis/ParanoiaWan/DeviceInfo.svg?style=flat)](https://travis-ci.org/ParanoiaWan/DeviceInfo)
 [![Version](https://img.shields.io/cocoapods/v/DeviceInfo.svg?style=flat)](http://cocoapods.org/pods/DeviceInfo)
@@ -13,16 +13,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-DeviceInfo is available through [CocoaPods](http://cocoapods.org). To install
+DeviceInfoCatcher is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DeviceInfo"
+pod "DeviceInfoCatcher"
 ```
 
 ## Author
 
-ParanoiaWan, wansheng_ios@sina.com
+Khala-wan, wansheng_ios@sina.com
 
 ## License
 
