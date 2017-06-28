@@ -1,0 +1,84 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/build/Debug-iphoneos/Nimble/Nimble.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CwlCatchException.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlCatchExceptionSupport/include/CwlCatchException.h"
+        },
+        {
+          'type': 'file',
+          'name': "CwlMachBadInstructionHandler.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "CwlPreconditionTesting.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+        },
+        {
+          'type': 'file',
+          'name': "DSL.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBExceptionCapture.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBStringify.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-Swift.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/Nimble-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-umbrella.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+        },
+        {
+          'type': 'file',
+          'name': "mach_excServer.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/mach_excServer.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/build/Debug-iphoneos/Nimble/Nimble.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/build/Pods.build/Debug-iphoneos/Nimble.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/build/Debug-iphoneos/Nimble/Nimble.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CurrentTestCaseTracker.h",
+          'external-contents': "/Users/wansheng/Desktop/Pods/Private/DeviceInfo/Example/Pods/Nimble/Sources/NimbleObjectiveC/CurrentTestCaseTracker.h"
+        }
+      ]
+    }
+  ]
+}

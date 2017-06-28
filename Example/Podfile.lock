@@ -1,0 +1,22 @@
+PODS:
+  - DeviceInfo (0.1.0)
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
+
+DEPENDENCIES:
+  - DeviceInfo (from `../`)
+  - Nimble
+  - Quick
+
+EXTERNAL SOURCES:
+  DeviceInfo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DeviceInfo: aa9bf7d8a6942a7d884a202cb91374d78944622f
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+
+PODFILE CHECKSUM: b313d01b0597bc8d39b49b22a777eda6950bc155
+
+COCOAPODS: 1.2.1

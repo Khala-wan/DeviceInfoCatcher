@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'DeviceInfo_Example' do
+  pod 'DeviceInfo', :path => '../'
+
+  target 'DeviceInfo_Tests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+    
+  end
+end
