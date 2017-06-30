@@ -73,8 +73,8 @@ extern unsigned long ip_addrs[MAXADDRS];
     [_infoDic setObject:os forKey:@"os"];
     
     
-    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.latitude] forKey:@"x"];
-    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.longitude] forKey:@"y"];
+    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.latitude] forKey:@"latitude"];
+    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.longitude] forKey:@"longitude"];
     
     [self.infoDic setObject:[self getIPAddressNew] forKey:@"ip"];
     [self.infoDic setObject:[self getUUID] forKey:@"device_id"];
