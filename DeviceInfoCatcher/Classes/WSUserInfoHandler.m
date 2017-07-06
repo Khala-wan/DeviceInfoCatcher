@@ -513,7 +513,6 @@ void GetHWAddresses()
         default:
             break;
     }
-    [self.infoDic setObject:netType forKey:@"n"];
     return netType;
 }
 
