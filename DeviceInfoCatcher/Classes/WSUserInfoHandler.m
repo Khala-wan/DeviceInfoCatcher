@@ -468,7 +468,7 @@ void GetHWAddresses()
         
         if (theAddr == 0)continue;
         if (theAddr == localHost) continue;
-        
+        if (ip_names[i+1] == NULL) continue;
         NSString * ip = [NSString stringWithCString:ip_names[i+1] encoding:NSUTF8StringEncoding];
         return ip;
     }
