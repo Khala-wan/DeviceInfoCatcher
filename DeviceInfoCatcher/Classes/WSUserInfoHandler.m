@@ -66,7 +66,7 @@ extern unsigned long ip_addrs[MAXADDRS];
 -(void)startGatherUserInfoWith:(success)success{
     
     self.successBlock = success;
-    
+    self.infoDic = [NSMutableDictionary dictionary];
     [self.infoDic setObject:[UIDevice currentDevice].deviceModel forKey:@"device"];
     
     NSString * os = [NSString stringWithFormat:@"%@%@",[UIDevice currentDevice].systemName,[UIDevice currentDevice].systemVersion];
