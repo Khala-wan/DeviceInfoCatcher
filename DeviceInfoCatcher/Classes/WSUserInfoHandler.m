@@ -110,13 +110,24 @@ extern unsigned long ip_addrs[MAXADDRS];
 - (void)getContactListWith:(contactSuccess)success{
     self.contactSuccessBlock = success;
     if ([[UIDevice currentDevice].systemVersion intValue] >= 9 ) {
-        
         CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
         if (status == CNAuthorizationStatusAuthorized) {
             NSMutableArray * arr = [self getContactList];
             self.contactSuccessBlock(arr.count > 0 ? arr : @[]);
         }else{
-            self.contactSuccessBlock(@[]);
+            if (status != CNAuthorizationStatusDenied) {
+                CNContactStore *store = [[CNContactStore alloc]init];
+                [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                    if (granted) {
+                        NSMutableArray * arr = [self getContactList];
+                        self.contactSuccessBlock(arr.count > 0 ? arr : @[]);
+                    }else{
+                        self.contactSuccessBlock(@[]);
+                    }
+                }];
+            }else{
+                self.contactSuccessBlock(@[]);
+            }
         }
     }
     else{
