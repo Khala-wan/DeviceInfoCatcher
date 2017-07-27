@@ -55,7 +55,7 @@ extern unsigned long ip_addrs[MAXADDRS];
 @implementation WSUserInfoHandler
 
 - (NSMutableDictionary *)infoDic{
-
+    
     if (!_infoDic) {
         _infoDic = [[NSMutableDictionary alloc]init];
     }
@@ -76,11 +76,12 @@ extern unsigned long ip_addrs[MAXADDRS];
     [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.latitude] forKey:@"latitude"];
     [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.longitude] forKey:@"longitude"];
     
-    [self.infoDic setObject:[self getIPAddressNew] forKey:@"ip"];
+    [self.infoDic setObject:[self getIPAddress:true] forKey:@"ip"];
     [self.infoDic setObject:[self getUUID] forKey:@"device_id"];
     [self.infoDic setObject:[self getNetType] forKey:@"net_type"];
     
     self.successBlock(self.infoDic);
+    
     
 }
 
@@ -101,7 +102,7 @@ extern unsigned long ip_addrs[MAXADDRS];
     }
     return strUUID;
 }
-    
+
 - (void)getContactListWith:(contactSuccess)success{
     self.contactSuccessBlock = success;
     if ([[UIDevice currentDevice].systemVersion intValue] >= 9 ) {
@@ -134,7 +135,7 @@ extern unsigned long ip_addrs[MAXADDRS];
     __weak typeof(self) weakSelf = self;
     
     ABAddressBookRef addBook =nil;
-
+    
     addBook=ABAddressBookCreateWithOptions(NULL, NULL);
     
     ABAddressBookRequestAccessWithCompletion(addBook, ^(bool greanted, CFErrorRef error){
@@ -162,17 +163,17 @@ extern unsigned long ip_addrs[MAXADDRS];
         for (CNLabeledValue * person in contact.phoneNumbers) {
             CNPhoneNumber * phone = person.value;
             
-              [phonesDic setObject:phone.stringValue forKey:@"phone"];
+            [phonesDic setObject:phone.stringValue forKey:@"phone"];
         }
         NSString *name = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
-        if ([contact.familyName isEqualToString:@"(null)"]) {
+        if (contact.familyName == nil) {
             name = [NSString stringWithFormat:@"%@",contact.givenName];
         }
-        if ([contact.givenName isEqualToString:@"(null)"]) {
+        if (contact.givenName == nil) {
             name = [NSString stringWithFormat:@"%@",contact.familyName];
         }
         [phonesDic setObject:name forKey:@"name"];
-
+        
         [temp addObject:phonesDic];
     }];
     return temp;
@@ -195,13 +196,19 @@ extern unsigned long ip_addrs[MAXADDRS];
         NSString*firstName=(__bridge NSString *)(ABRecordCopyValue(people, kABPersonFirstNameProperty));
         
         NSString*lastName=(__bridge NSString *)(ABRecordCopyValue(people, kABPersonLastNameProperty));
-    
+        
         NSMutableArray * phoneArr = [[NSMutableArray alloc]init];
         ABMultiValueRef phones= ABRecordCopyValue(people, kABPersonPhoneProperty);
         for (NSInteger j=0; j<ABMultiValueGetCount(phones); j++) {
             [phoneArr addObject:(__bridge NSString *)(ABMultiValueCopyValueAtIndex(phones, j))];
         }
-        NSString *nameStr =[NSString stringWithFormat:@"%@%@",firstName,lastName];
+        NSString *nameStr =[NSString stringWithFormat:@"%@%@",lastName,firstName];
+        if (firstName == nil) {
+            nameStr = [NSString stringWithFormat:@"%@",lastName];
+        }
+        if (lastName == nil) {
+            nameStr = [NSString stringWithFormat:@"%@",firstName];
+        }
         NSMutableDictionary *phoneDic = [NSMutableDictionary dictionary];
         for (int i=0; i<phoneArr.count; i++) {
             NSString *phoneStr = [NSString stringWithFormat:@"%@",[phoneArr objectAtIndex:i]];
@@ -263,7 +270,7 @@ extern unsigned long ip_addrs[MAXADDRS];
 }
 
 + (instancetype)sharedManger{
-
+    
     static WSUserInfoHandler *sharedManger = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -480,16 +487,16 @@ void GetHWAddresses()
         
         if (theAddr == 0)continue;
         if (theAddr == localHost) continue;
-        if (ip_names[i+1] == NULL) continue;
+        if (ip_names[i+1] == NULL)continue;
         NSString * ip = [NSString stringWithCString:ip_names[i+1] encoding:NSUTF8StringEncoding];
         return ip;
     }
     
-    return @"";
+    return @"获取失败";
 }
 
 - (NSString *)getNetType{
-
+    
     UIApplication *app = [UIApplication sharedApplication];
     
     NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
@@ -624,3 +631,4 @@ void GetHWAddresses()
 
 
 @end
+
