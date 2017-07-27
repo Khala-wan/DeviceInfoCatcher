@@ -164,9 +164,6 @@ extern unsigned long ip_addrs[MAXADDRS];
             
               [phonesDic setObject:phone.stringValue forKey:@"phone"];
         }
-        if (contact.familyName) {
-            <#statements#>
-        }
         NSString *name = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
         if ([contact.familyName isEqualToString:@"(null)"]) {
             name = [NSString stringWithFormat:@"%@",contact.givenName];
