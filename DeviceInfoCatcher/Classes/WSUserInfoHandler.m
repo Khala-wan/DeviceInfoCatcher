@@ -172,6 +172,7 @@ extern unsigned long ip_addrs[MAXADDRS];
         if (contact.givenName == nil) {
             name = [NSString stringWithFormat:@"%@",contact.familyName];
         }
+        
         [phonesDic setObject:name forKey:@"name"];
         
         [temp addObject:phonesDic];
@@ -499,7 +500,14 @@ void GetHWAddresses()
     
     UIApplication *app = [UIApplication sharedApplication];
     
-    NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
+    //    NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
+    NSArray *children = [NSArray new];
+    if ([[app valueForKeyPath:@"_statusBar"] isKindOfClass:NSClassFromString(@"UIStatusBar_Modern")]) {
+        children = [[[[app valueForKeyPath:@"_statusBar"] valueForKeyPath:@"_statusBar"] valueForKeyPath:@"foregroundView"] subviews];
+    } else {
+        children = [[[app valueForKeyPath:@"_statusBar"] valueForKeyPath:@"foregroundView"] subviews];
+    }
+    
     
     int type = 0;
     for (id child in children)
