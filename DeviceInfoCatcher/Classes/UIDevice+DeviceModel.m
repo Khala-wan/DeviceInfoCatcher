@@ -35,6 +35,9 @@ NSString *const Device_iPhone6S = @"iPhone 6S";
 NSString *const Device_iPhone6Splus = @"iPhone 6S Plus";
 NSString *const Device_iPhone7 = @"iPhone 7";
 NSString *const Device_iPhone7plus = @"iPhone 7 Plus";
+NSString *const Device_iPhone8 = @"iPhone 8";
+NSString *const Device_iPhone8plus = @"iPhone 8 Plus";
+NSString *const Device_iPhoneX = @"iPhone X";
 NSString *const Device_Unrecognized = @"?unrecognized?";
 
 @implementation UIDevice (DeviceModel)
@@ -96,7 +99,13 @@ NSString *const Device_Unrecognized = @"?unrecognized?";
                               @"iPhone8,1" : Device_iPhone6S,
                               @"iPhone8,2" : Device_iPhone6Splus,
                               @"iPhone9,1" : Device_iPhone7,
-                              @"iPhone9,2" : Device_iPhone7plus
+                              @"iPhone9,2" : Device_iPhone7plus,
+                              @"iPhone10,1" : Device_iPhone8,
+                              @"iPhone10,4" : Device_iPhone8,
+                              @"iPhone10,2" : Device_iPhone8plus,
+                              @"iPhone10,5" : Device_iPhone8plus,
+                              @"iPhone10,3" : Device_iPhoneX,
+                              @"iPhone10,6" : Device_iPhoneX,
                               };
     }
     

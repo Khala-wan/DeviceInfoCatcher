@@ -14,10 +14,6 @@
 		1951D670F2FF07723ADA1869461DBBB9 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33746FCA063550941B7A56857D3871EA /* XCTestSuite+QuickTestSuiteBuilder.m */; };
 		1A3E19B9F5EEB773C3BB61CA42F8BF62 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209CA122CC6A795B2460218DAC3FDECA /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		1E1CE28FFCCD7499620B47C910E9B9E9 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA5C6E24EEB19913F0A551B7857E82A /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		20D5B6C51F03929800ABC5E6 /* UIDevice+DeviceModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D5B6C11F03929800ABC5E6 /* UIDevice+DeviceModel.h */; };
-		20D5B6C61F03929800ABC5E6 /* UIDevice+DeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D5B6C21F03929800ABC5E6 /* UIDevice+DeviceModel.m */; };
-		20D5B6C71F03929800ABC5E6 /* WSUserInfoHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D5B6C31F03929800ABC5E6 /* WSUserInfoHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20D5B6C81F03929800ABC5E6 /* WSUserInfoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D5B6C41F03929800ABC5E6 /* WSUserInfoHandler.m */; };
 		22E9F6FA56858A5F7A5D664E5968ECB0 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = A40486A99458A94FC53A3FB71C51560D /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25D1805055756CAA69A167CA03B2465C /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB655448DFB72FB06195B8C2070B68DC /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		25D7312BBE513DAB0ACBC1814DDC7C86 /* CwlDarwinDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC56B034AE55DF4CEF39F4E172F143D /* CwlDarwinDefinitions.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -167,12 +163,13 @@
 		1704F0E87913F3C53926DDC2C9CA3082 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1980288EB0B8DF169C569027BEEEBB56 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		2037CF9AABCA4824F5653883642CE80F /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
+		2070EAEB20073D9700B615A7 /* UIDevice+DeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceModel.h"; sourceTree = "<group>"; };
+		2070EAED20073D9700B615A7 /* WSUserInfoHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoHandler.m; sourceTree = "<group>"; };
+		2070EAEE20073D9700B615A7 /* UIDevice+DeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceModel.m"; sourceTree = "<group>"; };
+		2070EAEF20073D9700B615A7 /* WSUserInfoHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSUserInfoHandler.h; sourceTree = "<group>"; };
+		2070EAF120073D9700B615A7 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		209CA122CC6A795B2460218DAC3FDECA /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		20A52C77E90C9348BD2628F89C878714 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
-		20D5B6C11F03929800ABC5E6 /* UIDevice+DeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceModel.h"; sourceTree = "<group>"; };
-		20D5B6C21F03929800ABC5E6 /* UIDevice+DeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceModel.m"; sourceTree = "<group>"; };
-		20D5B6C31F03929800ABC5E6 /* WSUserInfoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserInfoHandler.h; sourceTree = "<group>"; };
-		20D5B6C41F03929800ABC5E6 /* WSUserInfoHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoHandler.m; sourceTree = "<group>"; };
 		2805587B338F7C38C49077B2742CA348 /* DeviceInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceInfo-dummy.m"; sourceTree = "<group>"; };
 		2BE689DCA7ED1D1F461D0C12059EE86F /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		3013C23C64A9D8B17554879971F76FD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -351,17 +348,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02393209B90FA65883430E7A0C70C9C0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				20D5B6C11F03929800ABC5E6 /* UIDevice+DeviceModel.h */,
-				20D5B6C21F03929800ABC5E6 /* UIDevice+DeviceModel.m */,
-				20D5B6C31F03929800ABC5E6 /* WSUserInfoHandler.h */,
-				20D5B6C41F03929800ABC5E6 /* WSUserInfoHandler.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		0DBCB792AE6ADF174FD2EC57D8D00D82 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,10 +357,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2070EAE920073D9700B615A7 /* DeviceInfoCatcher */ = {
+			isa = PBXGroup;
+			children = (
+				2070EAEA20073D9700B615A7 /* Classes */,
+				2070EAF020073D9700B615A7 /* Assets */,
+			);
+			path = DeviceInfoCatcher;
+			sourceTree = "<group>";
+		};
+		2070EAEA20073D9700B615A7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2070EAEB20073D9700B615A7 /* UIDevice+DeviceModel.h */,
+				2070EAEE20073D9700B615A7 /* UIDevice+DeviceModel.m */,
+				2070EAEF20073D9700B615A7 /* WSUserInfoHandler.h */,
+				2070EAED20073D9700B615A7 /* WSUserInfoHandler.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2070EAF020073D9700B615A7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2070EAF120073D9700B615A7 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		2D13C469D0BB51C74FE86AA9F9572552 /* DeviceInfo */ = {
 			isa = PBXGroup;
 			children = (
-				858CC27D59A53946B3F50F06F3957B5F /* DeviceInfo */,
+				2070EAE920073D9700B615A7 /* DeviceInfoCatcher */,
 				B07BFC3B413C26E400FF169A080AD8B8 /* Support Files */,
 			);
 			name = DeviceInfo;
@@ -588,14 +602,6 @@
 			path = "Target Support Files/Pods-DeviceInfo_Example";
 			sourceTree = "<group>";
 		};
-		858CC27D59A53946B3F50F06F3957B5F /* DeviceInfo */ = {
-			isa = PBXGroup;
-			children = (
-				02393209B90FA65883430E7A0C70C9C0 /* Classes */,
-			);
-			path = DeviceInfo;
-			sourceTree = "<group>";
-		};
 		95FB686D3542CF7DB0A69902C70E785E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,9 +654,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20D5B6C51F03929800ABC5E6 /* UIDevice+DeviceModel.h in Headers */,
 				6DE010288C1AE69B5A20638A2350A8F3 /* DeviceInfo-umbrella.h in Headers */,
-				20D5B6C71F03929800ABC5E6 /* WSUserInfoHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,8 +941,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF91A3339B0FAC64901A853A28F1884 /* DeviceInfo-dummy.m in Sources */,
-				20D5B6C61F03929800ABC5E6 /* UIDevice+DeviceModel.m in Sources */,
-				20D5B6C81F03929800ABC5E6 /* WSUserInfoHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

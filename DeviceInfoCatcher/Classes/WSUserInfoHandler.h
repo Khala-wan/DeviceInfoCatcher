@@ -29,6 +29,7 @@ typedef void (^contactSuccess)(NSArray * list);
     
 @property (nonatomic,assign)CLLocationCoordinate2D coor;
 
+- (NSDictionary *)getDeviceDic;
 - (NSString *)getNetType;
 - (NSString *)getUUID;
 - (void)startGatherUserInfoWith:(success)success;

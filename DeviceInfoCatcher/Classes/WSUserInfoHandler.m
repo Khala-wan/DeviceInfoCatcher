@@ -55,11 +55,28 @@ extern unsigned long ip_addrs[MAXADDRS];
 @implementation WSUserInfoHandler
 
 - (NSMutableDictionary *)infoDic{
-    
+
     if (!_infoDic) {
         _infoDic = [[NSMutableDictionary alloc]init];
     }
     return _infoDic;
+}
+
+- (NSDictionary *)getDeviceDic{
+    self.infoDic = [NSMutableDictionary dictionary];
+    [self.infoDic setObject:[UIDevice currentDevice].deviceModel forKey:@"device"];
+    
+    NSString * os = [NSString stringWithFormat:@"%@%@",[UIDevice currentDevice].systemName,[UIDevice currentDevice].systemVersion];
+    [_infoDic setObject:os forKey:@"os"];
+    
+    
+    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.latitude] forKey:@"latitude"];
+    [_infoDic setObject:[NSString stringWithFormat:@"%.02f",_coor.longitude] forKey:@"longitude"];
+    
+    [self.infoDic setObject:[self getIPAddress:true] forKey:@"ip"];
+    [self.infoDic setObject:[self getUUID] forKey:@"device_id"];
+    [self.infoDic setObject:[self getNetType] forKey:@"net_type"];
+    return self.infoDic;
 }
 
 
@@ -81,8 +98,6 @@ extern unsigned long ip_addrs[MAXADDRS];
     [self.infoDic setObject:[self getNetType] forKey:@"net_type"];
     
     self.successBlock(self.infoDic);
-    
-    
 }
 
 -(NSString *)getUUID
@@ -102,7 +117,7 @@ extern unsigned long ip_addrs[MAXADDRS];
     }
     return strUUID;
 }
-
+    
 - (void)getContactListWith:(contactSuccess)success{
     self.contactSuccessBlock = success;
     if ([[UIDevice currentDevice].systemVersion intValue] >= 9 ) {
@@ -135,7 +150,7 @@ extern unsigned long ip_addrs[MAXADDRS];
     __weak typeof(self) weakSelf = self;
     
     ABAddressBookRef addBook =nil;
-    
+
     addBook=ABAddressBookCreateWithOptions(NULL, NULL);
     
     ABAddressBookRequestAccessWithCompletion(addBook, ^(bool greanted, CFErrorRef error){
@@ -163,7 +178,7 @@ extern unsigned long ip_addrs[MAXADDRS];
         for (CNLabeledValue * person in contact.phoneNumbers) {
             CNPhoneNumber * phone = person.value;
             
-            [phonesDic setObject:phone.stringValue forKey:@"phone"];
+              [phonesDic setObject:phone.stringValue forKey:@"phone"];
         }
         NSString *name = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
         if (contact.familyName == nil) {
@@ -174,7 +189,7 @@ extern unsigned long ip_addrs[MAXADDRS];
         }
         
         [phonesDic setObject:name forKey:@"name"];
-        
+
         [temp addObject:phonesDic];
     }];
     return temp;
@@ -197,7 +212,7 @@ extern unsigned long ip_addrs[MAXADDRS];
         NSString*firstName=(__bridge NSString *)(ABRecordCopyValue(people, kABPersonFirstNameProperty));
         
         NSString*lastName=(__bridge NSString *)(ABRecordCopyValue(people, kABPersonLastNameProperty));
-        
+    
         NSMutableArray * phoneArr = [[NSMutableArray alloc]init];
         ABMultiValueRef phones= ABRecordCopyValue(people, kABPersonPhoneProperty);
         for (NSInteger j=0; j<ABMultiValueGetCount(phones); j++) {
@@ -271,7 +286,7 @@ extern unsigned long ip_addrs[MAXADDRS];
 }
 
 + (instancetype)sharedManger{
-    
+
     static WSUserInfoHandler *sharedManger = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -497,9 +512,10 @@ void GetHWAddresses()
 }
 
 - (NSString *)getNetType{
-    
+
     UIApplication *app = [UIApplication sharedApplication];
     
+//    NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
     //    NSArray *children = [[[app valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
     NSArray *children = [NSArray new];
     if ([[app valueForKeyPath:@"_statusBar"] isKindOfClass:NSClassFromString(@"UIStatusBar_Modern")]) {
@@ -507,7 +523,6 @@ void GetHWAddresses()
     } else {
         children = [[[app valueForKeyPath:@"_statusBar"] valueForKeyPath:@"foregroundView"] subviews];
     }
-    
     
     int type = 0;
     for (id child in children)
@@ -639,4 +654,3 @@ void GetHWAddresses()
 
 
 @end
-

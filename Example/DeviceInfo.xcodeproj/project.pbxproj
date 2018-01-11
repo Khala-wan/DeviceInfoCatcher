@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2070EAF320073DB200B615A7 /* DeviceInfoCatcher.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2070EAF220073DB200B615A7 /* DeviceInfoCatcher.podspec */; };
 		20D5B6BA1F038FBD00ABC5E6 /* DeviceInfo_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5B6B91F038FBD00ABC5E6 /* DeviceInfo_Tests.swift */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		002E356CBDFA586ED47FE9B7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		19865F89E8BF56C8DD721152 /* Pods_DeviceInfo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeviceInfo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2070EAF220073DB200B615A7 /* DeviceInfoCatcher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DeviceInfoCatcher.podspec; path = ../DeviceInfoCatcher.podspec; sourceTree = "<group>"; };
 		20D5B6B71F038FBD00ABC5E6 /* DeviceInfo_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceInfo_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5B6B91F038FBD00ABC5E6 /* DeviceInfo_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo_Tests.swift; sourceTree = "<group>"; };
 		20D5B6BB1F038FBD00ABC5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +57,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		68B477B7248BD0150796C80A /* Pods-DeviceInfo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceInfo_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceInfo_Example/Pods-DeviceInfo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		80A945B067D3D5BC1C9937A9 /* DeviceInfo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DeviceInfo.podspec; path = ../DeviceInfo.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92892E0953116B3D3ACD06FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AB146F6436A09E6975A6FDC4 /* Pods-DeviceInfo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceInfo_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceInfo_Tests/Pods-DeviceInfo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +162,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				80A945B067D3D5BC1C9937A9 /* DeviceInfo.podspec */,
+				2070EAF220073DB200B615A7 /* DeviceInfoCatcher.podspec */,
 				002E356CBDFA586ED47FE9B7 /* README.md */,
 				92892E0953116B3D3ACD06FB /* LICENSE */,
 			);
@@ -279,6 +280,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				2070EAF320073DB200B615A7 /* DeviceInfoCatcher.podspec in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
